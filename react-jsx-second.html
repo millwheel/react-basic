@@ -27,14 +27,17 @@
             </button>
         );
     }
-    const Container = (
+    const Container = () => (
+        // Should be uppercase
         <div>
-            // Should be uppercase
-            <Title />
-            <Button />
-            // if you set it as lowercase, it can be treated as html tag.
+            <Title/>
+            <Button/>
         </div>
+        // if you set it as lowercase, it can be treated as html tag.
     );
-    ReactDOM.render(Container, root);
+    function render(){
+        ReactDOM.render(<Container />, root);
+    }
+    render();
 </script>
 </html>
